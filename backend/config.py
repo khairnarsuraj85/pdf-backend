@@ -34,7 +34,7 @@ def load_app_config() -> AppConfig:
     if raw_origins == "*":
         parsed_origins = "*"
     else:
-        parsed_origins = tuple(item.strip() for item in raw_origins.split(",") if item.strip())
+        parsed_origins = tuple(item.strip().rstrip("/") for item in raw_origins.split(",") if item.strip())
 
     return AppConfig(
         max_content_length=50 * 1024 * 1024,
