@@ -53,7 +53,7 @@ GEMINI_MODEL=gemini-1.5-flash
 ## Deploy on Render
 
 - Blueprint file: `render.yaml`
-- Python version: use the included `.python-version` file (`3.12`)
+- Python version: `PYTHON_VERSION=3.12.0`
 - Build command: `pip install -r requirements.txt`
 - Start command: `gunicorn -c gunicorn.conf.py app:app`
 - Health check path: `/health`
